@@ -1,0 +1,58 @@
+/*
+        List<User> u = Arrays.asList(
+                new User("Andrew", 20),
+                new User("Oleg", 12),
+                new User("Igor", 31),
+                new User("Oleg", 22),
+                new User("Konstantin", 43),
+                new User("Oleg", 52),
+                new User("oleg", 38),
+                new User("Sergio", 29),
+                new User("Peter", 58)
+        );
+
+        u.stream()
+                .filter(name -> name.getName().equalsIgnoreCase("OLEG"))
+                .mapToInt(o -> o.getAge())
+                .average()
+                .ifPresent(System.out::println);
+*/
+
+
+/*
+
+        List<Human> h = Arrays.asList(
+                new Human("peter", Arrays.asList("dog", "cat")),
+                new Human("nick", Arrays.asList("tortoise", "bear")),
+                new Human("basil", Arrays.asList("elefant", "monkey", "nn"))
+        );
+
+
+        Optional<String> petNames = h.stream()
+                .map(human -> human.getPets())
+                .flatMap(pets -> pets.stream())
+                .sorted(String::compareTo)
+                .reduce((s, t) -> { System.out.println("s: " + s + " t: " + t); return t; });
+                //.collect(Collectors.toList());
+        System.out.println(petNames);
+*/
+/*
+        List<String> p;
+        p = new ArrayList<String>();
+
+
+
+        p.add("dog");
+        p.add("cat");
+        h.add(new Human("george", p));
+        p = new ArrayList<String>();
+        p.add("giraffe");
+        p.add("crocodile");
+        h.add(new Human("egor", p));
+        System.out.println(h);
+        List<String> pets = new ArrayList<String>();
+        for(Human human : h){
+            pets.addAll(human.getPets());
+        }
+        System.out.println(pets);
+*/
